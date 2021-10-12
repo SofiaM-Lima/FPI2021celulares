@@ -13,12 +13,14 @@
     <!--Panel principal-->
     <div class="container">
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <nav>
-        <div class="nav-wrapper red">
-            <div></div>
-            <a href="#" class="brand-logo"> <i class="material-icons">insert_emoticon</i>Tienda CellPhone</a>
-            <ul id="nav-mobile" class="right">
+        <div class="nav-wrapper red ">
+            <a href="#" class="brand-logo hide-on-med-and-down"> <i class="material-icons">insert_emoticon</i>Tienda
+                CellPhone</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger "><i
+                    class="material-icons hide-on-large-only">menu</i></a>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                     <nav>
                         <div class="nav-wrapper">
@@ -40,9 +42,124 @@
             </ul>
         </div>
     </nav>
+    <!--Menu para celular-->
+    <ul id="slide-out" class="sidenav hide-on-large-only">
+        <li>
+            <div class="user-view ">
+                <div class="background red">
+                </div>
+                <h6 class="white-text">Tienda Cellphone</h6>
+            </div>
+        </li>
+        <li><a href="#!">Inicio</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!">Nuevo Anuncio</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!">Carrito</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!">Estadisticas</a></li>
+    </ul>
+    <!--Menu Despegable Modal-->
+    <br>
+    <a class="waves-effect waves-light btn modal-trigger right hide-on-large-only" href="#modal1"><i
+            class="material-icons ">change_history</i></a>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row ">
+                <div class="card-panel ">
+                    <h5>Marca</h5>
+                    <form action=""></form>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Samsung 15</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Huawei 10</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Nokia 56</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>iPhone 4</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Xiaomi 4</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="card-panel">
+                    <h5>Sistema</h5>
+                    <form action=""></form>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Android 15</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Windows 10</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Ios 56</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="card-panel">
+                    <h5>Pantalla</h5>
+                    <form action=""></form>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>6.0</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>5.5</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>5.0</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col s3">
-            <div class="section">
+            <div class="section hide-on-med-and-down">
                 <div class="row" style="padding: 0px 30px; margin-top: 20px; min-height: 50rem;">
                     <!--El check del cursor nuevo-->
                     <div class="col s2.9 red">
@@ -138,11 +255,20 @@
                 </div>
             </div>
         </div>
+        <!--Ordenar por en celular-->
+        <a class='dropdown-trigger btn hide-on-large-only' href='#' data-target='dropdown1'>Ordenar por:</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">Precio</a></li>
+            <li><a href="#!">Hasta</a></li>
+            <li><a href="#!">Fecha</a></li>
+        </ul>
+
         <!--Card de los celulares en venta-->
         <div class="col s9">
             <div class="row">
                 <!--Fecha y precio-->
-                <div class="card-panel col s3" style="padding-left: 1rem;">
+                <div class="card-panel col s3 hide-on-med-and-down" style="padding-left: 1rem;">
                     Precio:
                     <div class="input-field inline">
                         <input id="email_inline" type="number" style="width: 3rem;">
@@ -153,24 +279,25 @@
                     </div>
                 </div>
                 <!--Ordenar por y fecha-->
-                <div class="card-panel col s5" style="padding-left: 1rem; margin-left: 20%; margin-top: 3%;">
+                <div class="card-panel col s4 hide-on-med-and-down"
+                    style="padding-left: 1rem; margin-left: 20%; margin-top: 3%;">
                     Ordenar por:
-                    <a class="btn-flat"><i class="material-icons left">keyboard_arrow_up</i>Precio</a>
+                    <a class="btn-flat">Precio</a>
                     Fecha:
-                    <input type="text" class="datepicker" style="width: 7rem;">
+                    <input type="text" class="datepicker" style="width: 3rem;">
                 </div>
             </div>
             <!--Sector de las imagenes de los celulares-->
             <div class="row" style="padding: 0px 10px; margin-top: 20px; min-height: 40rem;">
-                <div class="col s3 ">
+                <div class="col s3">
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://images.samsung.com/is/image/samsung/latin-galaxy-note20-ultra-n985-sm-n985fznkgto-frontmysticbronze-thumb-320814311?$320_320_PNG$">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
-                            <h6>Samsung S20-Ultra</h6>
+                            <h6>Samsung S20</h6>
                             <p>Ultima Generacion</p>
                         </div>
                     </div>
@@ -179,11 +306,11 @@
                     <div class="card ">
                         <div class="card-image">
                             <img
-                                src="http://wmstatic.global.ssl.fastly.net/ml/091220-f-b4bfc5d6-236a-4999-841a-c3f4d1ea86d8.png?width=320&height=320&whitespace=true">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$535</span>
-                            <h6>Nokia M23 o M2.3</h6>
+                            <h6>Nokia M23</h6>
                             <p>Ultima Generacion</p>
                         </div>
                     </div>
@@ -192,7 +319,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://media.materiel.net/bo-images/fiches/telephonie/smartphones/xiaomi/redmi%209/image%202.png">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -205,7 +332,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://cdn.peoople.app/image/recommendation/b348659b-47ea-d628-566a-b348659b437d/b348659b-47ea-d628-566a-b348659b437d_211020164045_opt_320.jpg">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -218,7 +345,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://compusistel.com/wp-content/uploads/2020/05/Huawei-P30-Lite-ambos-lados-320x320.jpg">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -231,7 +358,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://supermercadobetel.com.co/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBODdETFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b396812d109a1ea70ae039f52ef6eb3f55fa7443/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9UY21WemFYcGxYMkZ1WkY5d1lXUmJDR2tDUUFGcEFrQUJld1k2QzJWNGRHVnVaRG9LZDJocGRHVTZER052Ym5abGNuUkpJZ2hxY0djR09nWkZWRG9LYzJGMlpYSjdDRG9NY1hWaGJHbDBlV2xmT2dwemRISnBjRlE2RDJKaFkydG5jbTkxYm1SYkNHa0IvMmtCLzJrQi93PT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--cce1b70dad3a0785ed15866f1aadf16af1f8013b/PRODUCTOS%20PAGINA%20W%20-%202020-09-16T181650.405.png?locale=es">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -244,7 +371,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img
-                                src="https://images.samsung.com/is/image/samsung/p6pim/latin/2108/gallery/latin-galaxy-z-fold3-f926-5g-sm-f926bzkdtpa-thumb-477355821?$320_320_PNG$">
+                                src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -256,7 +383,7 @@
                 <div class="col s3">
                     <div class="card">
                         <div class="card-image">
-                            <img src="https://www.devicespecifications.com/images/model/393b5326/320/main.jpg">
+                            <img src="celular.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">$635</span>
@@ -275,10 +402,24 @@
                 <li class="waves-effect"><a href="#!">4</a></li>
                 <li class="waves-effect"><a href="#!">5</a></li>
                 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-              </ul>
+            </ul>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>  document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });</script>
+    <script> document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems);
+        });
+    </script>
 </body>
-
 </html>
